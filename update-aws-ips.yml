@@ -1,0 +1,26 @@
+name: Update AWS IP Ranges
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Download and convert AWS IPs
+        run: |
+          curl -s https://ip-ranges.amazonaws.com/ip-ranges.json | \
+          jq -r '.prefixes[] | select(.region=="ap-northeast-2") | .ip_prefix' | \
+          awk 'BEGIN{print "# AWS ap-northeast-2 IP Ranges"; print "# Generated: " strftime("%Y-%m-%d %H:%M:%S"); print "/ip firewall address-list remove [find list=aws-ap-northeast-2]"; print ""} {print "/ip firewall address-list add list=aws-ap-northeast-2 address=" $1 " comment=\"AWS Seoul\""}' > aws-seoul-ips.rsc
+
+      - name: Commit and push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add aws-seoul-ips.rsc
+          git commit -m "Update AWS IP ranges" || exit 0
+          git push

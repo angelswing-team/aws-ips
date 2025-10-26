@@ -1,5 +1,5 @@
 # AWS ap-northeast-2 IP Ranges
-# Generated: 2025-10-22 05:19:31
+# Generated: 2025-10-26 00:15:47
 /ip firewall address-list remove [find list=aws-ap-northeast-2]
 
 /ip firewall address-list add list=aws-ap-northeast-2 address=3.5.140.0/22 comment="AWS Seoul"
@@ -54,6 +54,7 @@
 /ip firewall address-list add list=aws-ap-northeast-2 address=150.222.41.0/26 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=13.125.0.0/16 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=150.222.116.0/24 comment="AWS Seoul"
+/ip firewall address-list add list=aws-ap-northeast-2 address=1.178.91.0/24 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=15.193.9.0/24 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=52.219.202.0/23 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=52.94.198.64/28 comment="AWS Seoul"
@@ -118,6 +119,7 @@
 /ip firewall address-list add list=aws-ap-northeast-2 address=3.5.144.0/23 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=52.219.56.0/22 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=52.219.144.0/22 comment="AWS Seoul"
+/ip firewall address-list add list=aws-ap-northeast-2 address=1.178.91.0/24 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=3.36.167.64/28 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=3.36.167.80/28 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=35.50.238.0/24 comment="AWS Seoul"
@@ -151,6 +153,7 @@
 /ip firewall address-list add list=aws-ap-northeast-2 address=35.50.237.0/24 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=18.98.128.0/19 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=13.125.0.0/16 comment="AWS Seoul"
+/ip firewall address-list add list=aws-ap-northeast-2 address=1.178.91.0/24 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=15.193.9.0/24 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=35.71.109.0/24 comment="AWS Seoul"
 /ip firewall address-list add list=aws-ap-northeast-2 address=52.94.248.176/28 comment="AWS Seoul"

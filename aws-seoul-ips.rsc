@@ -1,5 +1,5 @@
 # AWS ap-northeast-2 IP Ranges
-# Generated: 2026-09-20 00:23:46
+# Generated: 2026-09-27 00:25:12
 /ip firewall address-list remove [find list=aws-ap-northeast-2]
 
 /ip firewall address-list add list=aws-ap-northeast-2 address=1.178.91.0/24 comment="AWS Seoul"
